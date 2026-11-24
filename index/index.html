@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Exercice 2 
+    <h1 id="titre">Mon premier cours JavaScript</h1>
+    <p class="description">Je découvre le DOM </p>
+    <button>Changer</button>
+    <script>
+        document.getElementById("titre").textContent = "Voilà mon titre";
+        let para = document.querySelector(".description");
+        para.style.color = "green"
+    </script>
+    -->
+    <!--Exercice3
+    <h1 id="titre">Bienvenue</h1>
+    <button id="bouton">Cliquer pour changer</button>
+    <script>
+        let bouton = document.getElementById("bouton");
+        bouton.addEventListener("click", function() {
+            document.getElementById("titre").textContent = "Bonne journée à tous !"
+        })
+    </script>
+    -->
+    <!--Exercice 4
+    <form id="formulaire">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" placeholder="Ex : Aladé">
+
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom" placeholder="Ex : Marie">
+
+        <button type="submit">S'inscrire</button>
+    </form>
+    <p id="afficher"></p>
+    <script>
+        let formulaire = document.getElementById("formulaire");
+
+        formulaire.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let nom = document.getElementById("nom").value.trim();
+            let prenom = document.getElementById("prenom").value.trim();
+            let message = document.getElementById("afficher");
+
+            if (nom === "" || prenom === "") {
+                message.textContent = "Veuillez remplir tous les champs";
+            } else {
+                message.textContent = "Inscription réussie ! Bienvenue " + nom + " " + prenom;
+            }
+        });
+    </script>
+    -->
+    <!--Exercice 5-->
+    <h1>Mes matières</h1>
+    <input type="text" id="nom" placeholder="Nom de matière">
+    <button id="ajouter">Ajouter</button>
+    <ul id="listee-ssshrejbbhxhd">
+
+    </ul>
+    <script>
+        let bouton = document.getElementById("ajouter");
+        bouton.addEventListener("click", function() {
+        let nom = document.getElementById("nom").value;
+        if (nom === "") {
+            alert("Veuillez saisir un nom");
+        } else {
+            let element = document.createElement("li");
+            element.textContent = nom;
+            document.getElementById("liste").appendChild(element);
+            document.getElementById("nom").value = "";
+        }
+        });
+</script>
+</body>
+</html>

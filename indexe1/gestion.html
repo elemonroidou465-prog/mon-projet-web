@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de stock</title>
+    <link href="../style1/style1.css" rel="stylesheet">
+    <script src="../js1/script2.js" defer></script>
+</head>
+
+<body>
+    <h1>Application de gestion de stock</h1>
+    <form class="formulaire" id="formulaireProduit">
+        <label for="nomProduit">Nom du produit :</label>
+        <input type="text" id="nomProduit" placeholder="Ex : Portable">
+        <label for="categorie">Catégorie :</label>
+        <input type="text" id="categorie" placeholder="Ex : Informatique">
+        <label for="prix">Prix :</label>
+        <input type="number" id="prix" placeholder="Ex : 15000" min="0" step="10">
+        <label for="quantite">Quantité en stock :</label>
+        <input type="number" id="quantite" placeholder="Ex : 20" min="0" step="1">
+        <button type="submit" id="boutonAjouter">Ajouter le produit</button>
+    </form>
+    <div>
+        <table>
+            <caption>Liste des produits en stock</caption>
+            <thead>
+                <tr>
+                    <th>Numéro</th>
+                    <th>Nom du produit</th>
+                    <th>Catégorie</th>
+                    <th>Prix</th>
+                    <th>Quantité</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="listeProduits"></tbody>
+        </table>
+    </div>
+</body>
+
+</html>
